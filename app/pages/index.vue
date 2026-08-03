@@ -1,4 +1,11 @@
 <script setup>
+
+import HeroBanner from '~/components/home/HeroBanner.vue'
+import CategorySection from '~/components/home/CategorySection.vue'
+import FeaturedProducts from '~/components/home/FeaturedProducts.vue'
+import PromoBanner from '~/components/home/PromoBanner.vue'
+import Newsletter from '~/components/home/Newsletter.vue'
+
 const config = useRuntimeConfig()
 
 const query = `
@@ -29,6 +36,13 @@ const { data, error } = await useFetch(
 
 <template>
   <div>
+
+  <HeroBanner />
+  <!--<CategorySection />-->
+  <FeaturedProducts />
+  <PromoBanner />
+  <Newsletter />
+
     <h1>Blog Posts</h1>
 
     <div v-if="error">
