@@ -3,174 +3,123 @@ import MegaMenu from '~/components/MegaMenu.vue'
 const menu = [
   {
     id: 1,
-    title: 'Products',
-    url: '/products',
+    title: 'Health',
+    url: '/health',
     children: [
       {
         id: 31,
-        title: 'Yakult Balance',
-        url: '/products/yakult-balance'
+        title: 'Wellness',
+        url: '/health/wellness'
       },
 
       {
         id: 32,
-        title: 'Yakult Original',
-        url: '/products/yakult-original'
+        title: 'Mental Health',
+        url: '/health/mental-health'
       },
 
       {
         id: 33,
-        title: "Yakult Plus Peach",
-        url: '/products/yakult-plus-peach'
+        title: "Healthy Habits",
+        url: '/health/healthy-habits'
       }
     ]
   },
   {
     id: 2,
-    title: 'Our Story',
-    url: '/our-story',
+    title: 'Nutrition',
+    url: '/nutrition',
     children: [
       {
         id: 31,
-        title: 'All',
+        title: 'Healthy Foods',
         url: '/our-story/all'
       },
 
       {
         id: 32,
-        title: 'Our Mission',
+        title: 'Vitamins',
         url: '/our-story/our-mission'
       },
 
       {
         id: 33,
-        title: "Our Science Mission",
+        title: "Diet Plans",
         url: '/our-story/our-science-mission'
       },
 
-      {
-        id: 33,
-        title: "Our Social Mission",
-        url: '/our-story/our-social-mission'
-      },
-
-      {
-        id: 33,
-        title: "Manufacturing Process",
-        url: '/our-story/manufacturing-process'
-      }
     ]
   },
   {
     id: 3,
-    title: 'Gut Science',
-    url: '/gut-science',
+    title: 'Fitness',
+    url: '/Fitness',
     children: [
       {
         id: 31,
-        title: 'All',
+        title: 'Home Workout',
         url: '/gut-science/all'
       },
 
       {
         id: 32,
-        title: 'Bacteria Science',
+        title: 'Yoga',
         url: '/gut-science/bacteria-science'
       },
 
        {
         id: 32,
-        title: 'Gut Bacteria',
+        title: 'Weight Loss',
         url: '/gut-science/gut-bacteria'
-      },
-
-      {
-        id: 32,
-        title: 'Digestive System',
-        url: '/gut-science/digestive-system'
-      },
-
-      {
-        id: 32,
-        title: 'Gut Brain Axis',
-        url: '/gut-science/gut-brain-axis'
-      },
-
-      {
-        id: 33,
-        title: "Women's Gut Guide",
-        url: '/gut-science/womens-gut-guide/',
-
-        children: [
-
-          {
-            id: 331,
-            title: 'Menstruation',
-            url: '/gut-science/menstruation'
-          },
-
-          {
-            id: 332,
-            title: 'Perimenopause',
-            url: '/gut-science/perimenopause'
-          },
-
-          {
-            id: 333,
-            title: 'Menopause',
-            url: '/gut-science/menopause'
-          }
-
-        ]
       }
 
     ]
   },
   {
     id: 4,
-    title: 'Gut Health',
-    url: '/gut-health',
+    title: 'Recipes',
+    url: '/Recipes',
     children: [
       {
         id: 31,
-        title: 'All',
+        title: 'Breakfast',
         url: '/gut-health/all'
       },
 
       {
         id: 32,
-        title: 'Our Mission',
+        title: 'Lunch',
         url: '/gut-health/our-mission'
       },
 
       {
         id: 33,
-        title: "Our Science Mission",
+        title: "Dinner",
         url: '/gut-health/our-science-mission'
       },
 
       {
         id: 33,
-        title: "Our Social Mission",
+        title: "Drinks",
         url: '/gut-health/our-social-mission'
       },
 
-      {
-        id: 33,
-        title: "Manufacturing Process",
-        url: '/gut-health/manufacturing-process'
-      }
     ]
   },
   {
     id: 5,
-    title: 'FAQ',
-    url: '/faq',
+    title: 'Blog',
+    url: '/blog',
   },
   {
     id: 6,
-    title: 'Buy Yakult',
-    url: '/buy-yakult',
+    title: 'About',
+    url: '/about',
+  },
+  {
+    id: 6,
+    title: 'Contact',
+    url: '/contact',
   }
 ]
 const localePath = useLocalePath()
