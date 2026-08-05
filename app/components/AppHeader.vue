@@ -77,8 +77,8 @@ const menu = [
   },
   {
     id: 4,
-    title: 'Recipes',
-    url: '/Recipes',
+    title: 'Wellness',
+    url: '/wellness',
     children: [
       {
         id: 31,
@@ -108,16 +108,21 @@ const menu = [
   },
   {
     id: 5,
-    title: 'Blog',
-    url: '/blog',
+    title: 'Recipes',
+    url: '/recipes',
   },
   {
     id: 6,
+    title: 'Blog',
+    url: '/articles',
+  },
+  {
+    id: 7,
     title: 'About',
     url: '/about',
   },
   {
-    id: 6,
+    id: 8,
     title: 'Contact',
     url: '/contact',
   }
@@ -170,55 +175,44 @@ const localePath = useLocalePath()
 </template>
 
 <style scoped>
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+}
 
-  .header{
-  color:white;
-  }
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+  height: 80px;
 
-  .container{
-  width:1200px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .logo{
-  font-size:30px;
-  font-weight:bold;
-  color:red;
-  text-decoration:none;
-  }
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #16a34a;
+  text-decoration: none;
+}
 
-  .search-box input{
-  width:350px;
-  padding:10px;
-  border:none;
-  border-radius:5px;
-  }
+.search-box input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
 
-  .menu{
-  display:flex;
-  gap:25px;
-  list-style:none;
-  margin:0;
-  padding:0;
-  }
-
-  .menu a{
-  color:white;
-  text-decoration:none;
-  }
-
-  .icons{
-  display:flex;
-  gap:20px;
-  align-items:center;
-  }
-
-  .icons a{
-  color:white;
-  text-decoration:none;
-  }
-
+.icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 </style>
