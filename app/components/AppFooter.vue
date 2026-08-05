@@ -6,10 +6,10 @@
 
 <div class="column">
 
-<h3>NuxtShop</h3>
+<h3>Chirag International</h3>
 
 <p>
-Premium Shopping Experience
+Healty Living. Better Lifestyle.
 </p>
 
 </div>
@@ -22,10 +22,6 @@ Premium Shopping Experience
 
 <li>
 <NuxtLink to="/">Home</NuxtLink>
-</li>
-
-<li>
-<NuxtLink to="/shop">Shop</NuxtLink>
 </li>
 
 <li>
@@ -45,14 +41,23 @@ Premium Shopping Experience
 <h3>Customer Service</h3>
 
 <ul>
+    <li>
+<NuxtLink
+  to="/privacy-policy"
+  class="hover:text-green-400 transition"
+>
+  Privacy Policy
+</NuxtLink>
+</li>
 
-<li>Shipping</li>
-
-<li>Returns</li>
-
-<li>Privacy Policy</li>
-
-<li>Terms & Conditions</li>
+<li>
+<NuxtLink
+  to="/terms-and-conditions"
+  class="hover:text-green-400 transition"
+>
+  Terms & Conditions
+</NuxtLink>
+</li>
 
 </ul>
 
@@ -62,11 +67,7 @@ Premium Shopping Experience
 
 <h3>Contact</h3>
 
-<p>Email : info@example.com</p>
-
-<p>Phone : +91 9999999999</p>
-
-<p>Noida, India</p>
+<p>contact@chirag.international</p>
 
 </div>
 
@@ -74,7 +75,7 @@ Premium Shopping Experience
 
 <div class="copyright">
 
-© 2026 NuxtShop. All Rights Reserved.
+© 2026 Chirag International. All Rights Reserved.
 
 </div>
 

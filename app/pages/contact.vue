@@ -57,7 +57,7 @@ const submitForm = () => {
 
             <div class="mt-10 space-y-6">
 
-              <div class="flex items-start gap-4">
+             <!-- <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-2xl">
                   📍
                 </div>
@@ -68,7 +68,7 @@ const submitForm = () => {
                     Noida, Uttar Pradesh, India
                   </p>
                 </div>
-              </div>
+              </div>-->
 
               <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-2xl">
@@ -83,7 +83,7 @@ const submitForm = () => {
                 </div>
               </div>
 
-              <div class="flex items-start gap-4">
+             <!-- <div class="flex items-start gap-4">
                 <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-2xl">
                   📞
                 </div>
@@ -94,7 +94,7 @@ const submitForm = () => {
                     +91 98765 43210
                   </p>
                 </div>
-              </div>
+              </div>-->
 
             </div>
 
@@ -178,7 +178,7 @@ const submitForm = () => {
     </section>
 
     <!-- Map Placeholder -->
-    <section class="py-16">
+    <!--<section class="py-16">
       <div class="max-w-7xl mx-auto px-6">
 
         <div class="bg-gray-200 rounded-3xl h-96 flex items-center justify-center">
@@ -188,6 +188,6 @@ const submitForm = () => {
         </div>
 
       </div>
-    </section>
+    </section>-->
   </div>
 </template>

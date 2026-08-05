@@ -85,12 +85,12 @@ const localePath = useLocalePath()
         </NuxtLink>-->
 
          <!-- Search -->
-      <div class="search-box">
+      <!--<div class="search-box">
         <input
           type="text"
           placeholder="Search"
         />
-      </div>
+      </div>-->
 
         <LanguageSwitcher />
 
