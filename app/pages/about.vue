@@ -1,13 +1,24 @@
 <script setup lang="ts">
 const route = useRoute()
+const { locale } = useI18n()
 const { getPage } = usePages()
 
-// Convert route to WordPress URI
-const uri = route.path.endsWith('/')
-  ? route.path
-  : `${route.path}/`
+let uri = route.path
+
+// Remove language prefix
+uri = uri.replace(`/${locale.value}`, '')
+
+if (!uri.endsWith('/')) {
+  uri += '/'
+}
+
+if (uri === '/') {
+  uri = '/'
+}
 
 const page = await getPage(uri)
+
+console.log(uri)
 </script>
 
 <template>

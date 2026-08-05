@@ -64,7 +64,7 @@ Premium Shopping Experience
 
 <p>Email : info@example.com</p>
 
-<p>Phone : +91 9876543210</p>
+<p>Phone : +91 9999999999</p>
 
 <p>Noida, India</p>
 

@@ -80,9 +80,9 @@ const stores = [
 
         </div>
 
-        <div class="price">
+        <!--<div class="price">
           {{ product.price }}
-        </div>
+        </div>-->
 
       </div>
 
@@ -96,10 +96,9 @@ const stores = [
         :key="store.id"
       >
 
-        <img
-          :src="store.logo"
-          :alt="store.name"
-        >
+      <div class="store-name">
+          {{ store.name }}
+          </div>
 
         <button>
           BUY NOW
@@ -126,7 +125,8 @@ const stores = [
 }
 
 .product-image img{
-    width:450px;
+    width:220px;
+    height:auto;
 }
 
 .product-info h1{
