@@ -127,6 +127,9 @@ const menu = [
     url: '/contact',
   }
 ]
+
+
+
 const localePath = useLocalePath()
 </script>
 <template>

@@ -1,3 +1,14 @@
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Articles | Chirag International',
+  description: 'Explore the latest articles on health, nutrition, fitness and healthy living.'
+})
+
+const { getPosts } = usePosts()
+
+const articles = await getPosts()
+</script>
+
 <template>
 
 <section class="bg-gray-50 py-20">
@@ -19,33 +30,38 @@ View All →
 <div class="grid lg:grid-cols-3 gap-8">
 
 <div
-v-for="post in 6"
-:key="post"
+v-for="article in articles"
+          :key="article.id"
 class="bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition"
 >
 
-<img
-src="https://images.unsplash.com/photo-1490645935967-10de6ba17061"
-class="w-full h-60 object-cover"
-/>
+  <img
+            :src="article.featuredImage.node.sourceUrl"
+            :alt="article.title"
+            class="w-full h-60 object-cover"
+          />
 
 <div class="p-6">
 
 <span class="text-green-600 text-sm font-semibold">
-Nutrition
+{{ article.category }}
 </span>
 
 <h3 class="text-2xl font-bold mt-3">
-10 Healthy Habits For Better Life
+      {{ article.title }}
 </h3>
 
-<p class="text-gray-600 mt-4">
-Discover simple habits that improve your health every day.
-</p>
+ <div
+  class="mt-4 text-gray-600 line-clamp-3"
+  v-html="article.excerpt"
+></div>
 
-<button class="mt-6 text-green-700 font-semibold">
-Read More →
-</button>
+<NuxtLink
+              :to="`/articles/${article.slug}`"
+              class="inline-block mt-6 text-green-700 font-semibold hover:text-green-900"
+            >
+              Read More →
+            </NuxtLink>
 
 </div>
 

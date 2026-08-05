@@ -31,6 +31,13 @@ const featuredArticles = [
   }
 ]
 
+
+
+const { getPostsByCategory } = useCategoryPosts()
+
+const articles = await getPostsByCategory('health')
+
+
 const tips = [
   'Drink at least 2–3 litres of water every day.',
   'Eat more fresh fruits and vegetables.',
@@ -130,46 +137,46 @@ const tips = [
 
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <article
-            v-for="article in featuredArticles"
-            :key="article.id"
-            class="bg-white rounded-3xl shadow hover:shadow-xl transition overflow-hidden"
-          >
+  <article
+    v-for="article in articles"
+    :key="article.id"
+    class="bg-white rounded-2xl shadow-lg overflow-hidden"
+  >
 
-            <img
-              :src="article.image"
-              :alt="article.title"
-              class="w-full h-60 object-cover"
-            />
+    <img
+      :src="article.featuredImage?.node?.sourceUrl"
+      class="w-full h-60 object-cover"
+    >
 
-            <div class="p-6">
+    <div class="p-6">
 
-              <span class="text-green-600 text-sm font-semibold">
-                {{ article.category }}
-              </span>
+      <span class="text-green-600">
+        {{ article.categories.nodes[0]?.name }}
+      </span>
 
-              <h3 class="text-2xl font-bold mt-3">
-                {{ article.title }}
-              </h3>
+      <h2 class="text-2xl font-bold mt-3">
+        {{ article.title }}
+      </h2>
 
-              <p class="text-gray-600 mt-4">
-                {{ article.excerpt }}
-              </p>
+      <div
+        class="mt-4 text-gray-600 line-clamp-3"
+        v-html="article.excerpt"
+      />
 
-              <NuxtLink
-                :to="`/articles/${article.slug}`"
-                class="inline-block mt-6 text-green-700 font-semibold"
-              >
-                Read More →
-              </NuxtLink>
+      <NuxtLink
+        :to="`/articles/${article.slug}`"
+        class="inline-block mt-6 text-green-700 font-semibold"
+      >
+        Read More →
+      </NuxtLink>
 
-            </div>
+    </div>
 
-          </article>
+  </article>
 
-        </div>
+</div>
 
       </div>
 

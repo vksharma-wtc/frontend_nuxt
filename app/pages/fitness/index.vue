@@ -59,6 +59,10 @@ const featuredArticles = [
   }
 ]
 
+const { getPostsByCategory } = useCategoryPosts()
+
+const articles = await getPostsByCategory('fitness')
+
 const fitnessTips = [
   'Exercise at least 30 minutes every day.',
   'Warm up before every workout.',

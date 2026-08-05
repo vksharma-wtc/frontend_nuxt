@@ -23,17 +23,23 @@
             mental wellness and lifestyle from experts.
           </p>
 
-          <div class="mt-10 flex gap-4">
+          <div class="mt-10 flex flex-wrap gap-4">
 
-            <button class="bg-white text-green-700 px-8 py-4 rounded-full font-semibold hover:shadow-xl transition">
-              Explore Articles
-            </button>
+  <NuxtLink
+    to="/articles"
+    class="bg-white text-green-700 px-8 py-4 rounded-full font-semibold hover:shadow-xl transition"
+  >
+    Explore Articles
+  </NuxtLink>
 
-            <button class="border border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-green-700 transition">
-              Learn More
-            </button>
+  <NuxtLink
+    to="/about"
+    class="border border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-green-700 transition"
+  >
+    Learn More
+  </NuxtLink>
 
-          </div>
+</div>
 
         </div>
 
