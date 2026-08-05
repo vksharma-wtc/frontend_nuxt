@@ -209,7 +209,7 @@ const fitnessTips = [
         <div class="grid lg:grid-cols-3 gap-8">
 
           <article
-            v-for="article in featuredArticles"
+            v-for="article in articles"
             :key="article.slug"
             class="bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition"
           >
