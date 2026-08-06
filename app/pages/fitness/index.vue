@@ -206,42 +206,46 @@ const fitnessTips = [
 
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <article
-            v-for="article in articles"
-            :key="article.slug"
-            class="bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition"
-          >
+  <article
+    v-for="article in articles"
+    :key="article.id"
+    class="bg-white rounded-2xl shadow-lg overflow-hidden"
+  >
 
-            <img
-              :src="article.image"
-              :alt="article.title"
-              class="w-full h-60 object-cover"
-            >
+    <img
+      :src="article.featuredImage?.node?.sourceUrl"
+      class="w-full h-60 object-cover"
+    >
 
-            <div class="p-6">
+    <div class="p-6">
 
-              <h3 class="text-2xl font-bold">
-                {{ article.title }}
-              </h3>
+      <span class="text-green-600">
+        {{ article.categories.nodes[0]?.name }}
+      </span>
 
-              <p class="mt-4 text-gray-600">
-                {{ article.excerpt }}
-              </p>
+      <h2 class="text-2xl font-bold mt-3">
+        {{ article.title }}
+      </h2>
 
-              <NuxtLink
-                :to="`/articles/${article.slug}`"
-                class="inline-block mt-6 text-blue-700 font-semibold"
-              >
-                Read More →
-              </NuxtLink>
+      <div
+        class="mt-4 text-gray-600 line-clamp-3"
+        v-html="article.excerpt"
+      />
 
-            </div>
+      <NuxtLink
+        :to="`/articles/${article.slug}`"
+        class="inline-block mt-6 text-green-700 font-semibold"
+      >
+        Read More →
+      </NuxtLink>
 
-          </article>
+    </div>
 
-        </div>
+  </article>
+
+</div>
 
       </div>
 
