@@ -46,7 +46,7 @@
         <div>
 
           <img
-            src="https://images.unsplash.com/photo-1490645935967-10de6ba17061"
+            src="https://chirag.academy/wp-content/uploads/2026/08/photo1.jpg"
             class="rounded-3xl shadow-2xl"
           >
 
