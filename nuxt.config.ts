@@ -24,6 +24,11 @@ export default defineNuxtConfig({
         code: 'nl',
         name: 'Dutch',
         file: 'nl.json'
+      },
+      {
+        code: 'hi',
+        name: 'हिन्दी',
+        file: 'hi.json'
       }
     ]
   },

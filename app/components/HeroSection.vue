@@ -1,3 +1,7 @@
+<script setup>
+const { t } = useI18n()
+</script>
+
 <template>
   <section class="relative overflow-hidden bg-gradient-to-r from-green-700 via-green-600 to-emerald-500">
 
@@ -12,9 +16,9 @@
           </span>
 
           <h1 class="text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-            Discover Better Health
+            {{ t('hero.title') }}
             <span class="text-yellow-300">
-              Every Day
+              {{ t('hero.highlight') }}
             </span>
           </h1>
 

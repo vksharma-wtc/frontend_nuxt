@@ -1,5 +1,6 @@
 {
-    "home": "Home",
-    "shop": "Winkel",
-    "contact": "Contact"
-}
+    "hero": {
+      "title": "Ontdek een betere gezondheid",
+      "highlight": "Elke dag"
+    }
+  }

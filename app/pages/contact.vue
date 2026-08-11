@@ -18,6 +18,14 @@ const submitForm = () => {
 </script>
 
 <template>
+   <div class=" text-white p-6 rounded-lg">
+    Hello Tailwind
+  </div>
+<button
+  class="bg-blue-500 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
+>
+    Submit
+</button>
   <div>
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-green-700 via-green-600 to-emerald-500 text-white">

@@ -1,5 +1,6 @@
 {
-    "home": "Accueil",
-    "shop": "Boutique",
-    "contact": "Contact"
-}
+    "hero": {
+      "title": "Découvrez une meilleure santé",
+      "highlight": "Chaque jour"
+    }
+  }

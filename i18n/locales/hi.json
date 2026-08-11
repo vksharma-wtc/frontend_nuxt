@@ -1,5 +1,6 @@
 {
-    "home": "Home",
-    "shop": "Winkel",
-    "contact": "Contact"
-}
+    "hero": {
+      "title": "बेहतर स्वास्थ्य की खोज करें",
+      "highlight": "हर दिन"
+    }
+  }
