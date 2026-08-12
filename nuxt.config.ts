@@ -43,6 +43,8 @@ export default defineNuxtConfig({
     public: {
       wordpressGraphql:
         'https://chirag.academy/graphql'
-    }
+    },
+    wordpressUrl:
+    process.env.NUXT_WORDPRESS_URL
   }
 })

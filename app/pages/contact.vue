@@ -11,21 +11,70 @@ const form = reactive({
   message: ''
 })
 
-const submitForm = () => {
-  console.log(form)
-  alert('Thank you! Your message has been submitted.')
+
+const loading = ref(false)
+
+const success = ref('')
+
+const error = ref('')
+
+//const submitForm = () => {
+ // console.log(form)
+ // alert('Thank you! Your message has been submitted.')
+//}
+
+const submitForm = async () => {
+
+  loading.value = true
+
+  success.value = ''
+
+  error.value = ''
+
+
+  try {
+
+    const response = await $fetch(
+      '/api/contact',
+      {
+        method: 'POST',
+
+        body: form
+      }
+    )
+
+
+    success.value =
+      response.message
+
+
+    form.name = ''
+
+    form.email = ''
+
+    form.subject = ''
+
+    form.message = ''
+
+
+  } catch (err: any) {
+
+    error.value =
+      err?.data?.message ||
+      'Something went wrong.'
+
+  } finally {
+
+    loading.value = false
+
+  }
+
 }
+
+
 </script>
 
 <template>
-   <div class=" text-white p-6 rounded-lg">
-    Hello Tailwind
-  </div>
-<button
-  class="bg-blue-500 hover:bg-blue-700 text-white px-6 py-3 rounded-lg"
->
-    Submit
-</button>
   <div>
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-green-700 via-green-600 to-emerald-500 text-white">
@@ -171,10 +220,29 @@ const submitForm = () => {
 
               <button
                 type="submit"
+                :disabled="loading"
                 class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 rounded-xl transition"
               >
-                Send Message
+                 {{ loading
+          ? 'Submitting...'
+          : 'Submit'
+        }}
               </button>
+
+               <p
+        v-if="success"
+        class="text-green-600"
+      >
+        {{ success }}
+      </p>
+
+
+      <p
+        v-if="error"
+        class="text-red-600"
+      >
+        {{ error }}
+      </p>
 
             </form>
 
