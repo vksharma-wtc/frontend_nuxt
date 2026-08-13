@@ -1,6 +1,14 @@
-<script setup>
+<script setup lang="ts">
 const { t } = useI18n()
+
+const { data } = await useHomePage()
+
+const hero = computed(() => data?.page?.heroBanner)
+
+
 </script>
+
+
 
 <template>
   <section class="relative overflow-hidden bg-gradient-to-r from-green-700 via-green-600 to-emerald-500">
@@ -12,7 +20,7 @@ const { t } = useI18n()
         <div>
 
           <span class="inline-block bg-white/20 text-white px-4 py-2 rounded-full text-sm mb-6">
-            Healthy Living Starts Here
+            {{ hero?.heroBadge }}
           </span>
 
           <h1 class="text-5xl lg:text-6xl font-extrabold text-white leading-tight">
@@ -49,11 +57,12 @@ const { t } = useI18n()
 
         <div>
 
-          <img
-            src="https://chirag.academy/wp-content/uploads/2026/08/photo1.jpg"
-            class="rounded-3xl shadow-2xl"
-          >
-
+        <img
+  v-if="hero?.heroImage?.node?.sourceUrl"
+  :src="hero.heroImage.node.sourceUrl"
+  :alt="hero.heroImage.node.altText || 'Hero image'"
+  class="rounded-3xl shadow-2xl"
+/>
         </div>
 
       </div>

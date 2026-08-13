@@ -35,11 +35,12 @@ v-for="article in articles"
 class="bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition"
 >
 
-  <img
-            :src="article.featuredImage.node.sourceUrl"
-            :alt="article.title"
-            class="w-full h-60 object-cover"
-          />
+<img
+  v-if="article.featuredImage?.node?.sourceUrl"
+  :src="article.featuredImage.node.sourceUrl"
+  :alt="article.title"
+  class="w-full h-60 object-cover"
+/>
 
 <div class="p-6">
 
