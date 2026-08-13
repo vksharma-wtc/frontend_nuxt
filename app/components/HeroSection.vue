@@ -31,8 +31,7 @@ const hero = computed(() => data?.page?.heroBanner)
           </h1>
 
           <p class="mt-6 text-lg text-green-100 leading-8">
-            Read trusted articles about nutrition, fitness, healthy recipes,
-            mental wellness and lifestyle from experts.
+            {{ hero?.heroDescription }}
           </p>
 
           <div class="mt-10 flex flex-wrap gap-4">
