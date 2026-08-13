@@ -31,10 +31,11 @@ const articles = await getPosts()
           class="bg-white rounded-2xl shadow hover:shadow-xl transition overflow-hidden"
         >
           <img
-            :src="article.featuredImage.node.sourceUrl"
-            :alt="article.title"
-            class="w-full h-60 object-cover"
-          />
+  v-if="article.featuredImage?.node?.sourceUrl"
+  :src="article.featuredImage.node.sourceUrl"
+  :alt="article.title"
+  class="w-full h-60 object-cover"
+/>
 
           <div class="p-6">
 
